@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: content-customer
+      
+---
+spring:
+  profiles: test
+  cloud:
+    consul:
+      enabled: false    
+---
+
+spring:
+  profiles: default
+  cloud:
+    consul:
+        enabled: false
+
+---
+spring:
+  profiles: qa
+  cloud:
+    consul:
+      enabled: false

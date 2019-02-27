@@ -1,0 +1,24 @@
+spring:
+  sleuth:
+    enabled : false
+  profiles:
+    active: default
+server:
+  port: 9091
+  tomcat:
+    basedir: logs
+    accesslog:
+      enabled: true
+      pattern: '%t %a "%r" %s (%D ms)'
+      suffix: '.log'
+      directory: access_logs
+      pubsub:
+        push:
+          enabled: false
+project:
+  redis:
+    enabled: false
+      
+management:
+  security:
+    enabled: false

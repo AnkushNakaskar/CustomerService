@@ -1,0 +1,35 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+server:
+  error:
+    whitelabel:
+      enabled: false
+  servlet:
+    contextPath:  /api/customerService
+
+project:
+  group: core
+  team: content
+  application: 'content-customer'
+  podId : <placeholder>
+
+endpoints:
+  prometheus:
+    enabled: true
+management:
+  security:
+    flag: false
+  health:
+    jms:
+      enabled: false
+    rabbit:
+      enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: health,prometheus,info,metrics,threaddump
